@@ -73,3 +73,8 @@ font-family: 'Chicle', cursive;
 .condiment-font {
 font-family: 'Condiment', cursive;
 }
+
+.pad-me {
+padding: 10px 20px 10px 20px;
+text-align: left;
+}
