@@ -12,47 +12,77 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="blue darken-3" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo white-text ranga-font">Peter Momanyi</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#icon-section" class="white-text">eTechonologist</a></li>
-        <li><a href="#achievements-section" class="white-text">My Achievements</a></li>
-        <li><a href="#contact-section" class="white-text">Contact Me</a></li>
-      </ul>
+  <div class="navbar-fixed">
+    <nav class="blue darken-3" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo white-text ranga-font">Peter Momanyi</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#icon-section" class="white-text">eTechonologist</a></li>
+          <li><a href="#achievements-section" class="white-text">My Achievements</a></li>
+          <li><a href="#contact-section" class="white-text">Contact Me</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-	<li><div class="userView">
-      <div class="background">
-        <img src="img/blue-darken.jpg">
+        <ul id="nav-mobile" class="side-nav click-to-toggle">
+          <li><div class="userView">
+            <div class="background">
+              <img src="img/blue-darken.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="img/resized.png"></a>
+            <a href="#!name"><span class="white-text name">Peter Momanyi</span></a>
+            <a href="#!email"><span class="white-text email">petramomanyi@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">android</i>LinkedIn</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Welcome</a></li>
+          <li><a href="#icon-section" class="waves-effects"><i class="material-icons">all_inclusive</i>eTechnologist</a></li>
+          <li><a href="#achievements-section" class="waves-effects"><i class="material-icons">star</i>My Achievements</a></li>
+          <li><a href="#contact-section" class="waves-effects"><i class="material-icons">mail</i>Contact Me</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
       </div>
-      <a href="#!user"><img class="circle" src="img/resized.png"></a>
-      <a href="#!name"><span class="white-text name">Peter Momanyi</span></a>
-      <a href="#!email"><span class="white-text email">petramomanyi@gmail.com</span></a>
-    	</div></li>
-    	<li><a href="#!"><i class="material-icons">android</i>LinkedIn</a></li>
-    	<li><div class="divider"></div></li>
-    	<li><a class="subheader">Welcome</a></li>
-        <li><a href="#icon-section" class="waves-effects"><i class="material-icons">all_inclusive</i>eTechnologist</a></li>
-        <li><a href="#achievements-section" class="waves-effects"><i class="material-icons">star</i>My Achievements</a></li>
-        <li><a href="#contact-section" class="waves-effects"><i class="material-icons">mail</i>Contact Me</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-        <div class="row center carousel">
-         <a class="carousel-item" href="#one!"><img  class="responsive-img circle" src="img/abreast.jpg"></a>
-         <a class="carousel-item" href="#two!"><img  class="responsive-img circle" src="img/pocketing.jpg"></a>
-         <a class="carousel-item" href="#three!"><img class="responsive-img circle" src="img/sideways.jpg"></a>
-        </div>
+      <div class="row center carousel">
+        <a class="carousel-item" href="#one!"><img  class="responsive-img circle" src="img/abreast.jpg"></a>
+        <a class="carousel-item" href="#two!"><img  class="responsive-img circle" src="img/pocketing.jpg"></a>
+        <a class="carousel-item" href="#three!"><img class="responsive-img circle" src="img/sideways.jpg"></a>
+      </div>
       <h1 class="header center orange-text text-lighten-2 ranga-font">Peter Momanyi</h1>
       <div class="row center">
-        <h5 class="header col s12 white-text">Front Technologist | Android Developer | Content Curator | Digital Marketer</h5>
+        <h5 class="header col s12 white-text">Frontline Technologist | Android Developer | Content Curator | Digital Marketer</h5>
       </div>
-      <div class="row center">
-        <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Let's Connect!</a>
+      <div hidden="true" class="row center" id="social-icons">
+	<a class="btn-floating btn-large waves-effect waves-light blue darken-4"><i class="fa fa-facebook"></i></a>
+	<a class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-google-plus"></i></a>
+	<a class="btn-floating btn-large waves-effect waves-light grey"><i class="fa fa-instagram"></i></a>
+	<a class="btn-floating btn-large waves-effect waves-light green darken-2"><i class="fa fa-whatsapp"></i></a>
+	<a class="btn-floating btn-large waves-effect waves-light blue"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row center" id="connect">
+        <a onclick="showSocial()" id="download-button" class="btn-large waves-effect waves-light orange">Let's Connect!</a>
+	<script type="text/javascript">
+	function showSocial(){
+	  var connect = document.getElementById("connect");
+	  var hide = document.createAttribute("hidden");
+	  hide.value="true";
+	  connect.setAttributeNode(hide);
+	  document.getElementById("social-icons").removeAttribute("hidden");	
+	}
+	</script>
+      </div>
+      <!-- The Floating Fab -->
+      <div class="fixed-action-btn click-to-toggle">
+        <a class="btn-floating btn-large blue darken-2">
+          <i class="large material-icons">add</i>
+        </a>
+        <ul>
+          <li><a href="#contact-section" class="btn-floating red"><i class="material-icons">chat</i></a></li>
+          <li><a href="#" class="btn-floating blue darken-3"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="btn-floating blue"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="btn-floating grey"><i class="fa fa-instagram"></i></a></li>
+        </ul>
       </div>
       <br><br>
 
@@ -66,58 +96,58 @@
       <div class="row" id="icon-section">
         <div class="col s12 m4">
           <div class="icon-block">
-	   <div class="card yellow lighten-4">
-    <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">important_devices</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h5 class="center">Front Technologist</h5><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I help startups grow without the pains of growth.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Fluent"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h5 class="center">Front Technologist</h5><i class="material-icons right">close</i></span>
-     	 <p class="light">Web Development, Customer acquisition and retention, Microsoft Office...name it! I not only practice, but also enjoy to train as well.</p>
-    	</div>
- 	 </div>
+            <div class="card yellow lighten-4">
+              <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
+                <h2 class="center brown-text"><i class="material-icons">important_devices</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><h5 class="center">Frontline Technologist</h5><i class="material-icons right">more_vert</i></span>
+                <p class="light">I help startups grow without the pains of growth.</p> 
+                <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Fluent"></span></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><h5 class="center">Front Technologist</h5><i class="material-icons right">close</i></span>
+                <p class="light">Web Development, Customer acquisition and retention, Microsoft Office...name it! I not only practice, but also enjoy to train as well.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-	   <div class="card yellow lighten-4">
-    <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
- 	 </div>
+            <div class="card yellow lighten-4">
+              <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
+                <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">more_vert</i></span>
+                <p class="light">I don't know why, but they call me guru.</p> 
+                <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
+                <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-	   <div class="card yellow lighten-4">
-    <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h5 class="center">Digital Marketer</h5><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I train on Google Digital Marketing skills.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><span class="new badge" data-badge-caption="Pro"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h5 class="center">Digital Marketer</h5><i class="material-icons right">close</i></span>
-     	 <p class="light">I can get you a rewarding digital profile in no time. Got experience in teaching and leading youth teams in the Google's Digital Skills Program.</p>
-    	</div>
- 	 </div>
+            <div class="card yellow lighten-4">
+              <div class="card-image waves-effect waves-block waves-light yellow lighten-3">
+                <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><h5 class="center">Digital Marketer</h5><i class="material-icons right">more_vert</i></span>
+                <p class="light">I train on Google Digital Marketing skills.</p> 
+                <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><span class="new badge" data-badge-caption="Pro"></span></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><h5 class="center">Digital Marketer</h5><i class="material-icons right">close</i></span>
+                <p class="light">I can get you a rewarding digital profile in no time. Got experience in teaching and leading youth teams in the Google's Digital Skills Program.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -131,239 +161,241 @@
       <div class="container">
         <div class="row center">
           <h5 class="header col s12 light blue-grey-text text-darken-3">"Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."
-~Linus Tovalds</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/golden-lighten.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row" id="achievements-section">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 class="teal-text">My Achievements.</h4>
-        <div class="row center carousel">
-         <div class="carousel-item" href="#one!">
-	   <div class="card teal lighten-4">
-    <div class="card-image waves-effect waves-block waves-light teal lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
+            ~Linus Tovalds</h5>
           </div>
-	 </div>
-         <div class="carousel-item" href="#two!">
-	   <div class="card teal lighten-4">
-    <div class="card-image waves-effect waves-block waves-light teal lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
-          </div>
-	 </div>
-         <div class="carousel-item" href="#five!">
-	   <div class="card teal lighten-4">
-    <div class="card-image waves-effect waves-block waves-light teal lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
-          </div>
-	 </div>
-         <div class="carousel-item" href="#three!">
-	   <div class="card teal lighten-4">
-    <div class="card-image waves-effect waves-block waves-light teal lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
-          </div>
-	 </div>
-         <div class="carousel-item" href="#four!">
-	   <div class="card teal lighten-4">
-    <div class="card-image waves-effect waves-block waves-light teal lighten-3">
-    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
-    </div>
-    	<div class="card-content">
-     	 <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
-     	<p class="light">I don't know why, but they call me guru.</p> 
-	<p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
-    	</div>
-    	<div class="card-reveal">
-     	 <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
-     	 <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
-    	</div>
-          </div>
-	 </div>
-
-
-        </div>
         </div>
       </div>
-
+      <div class="parallax"><img src="img/golden-lighten.jpg" alt="Unsplashed background img 2"></div>
     </div>
-  </div>
 
-  <div class="container">
-	<div class="section">
-	<div class="row center">
-	  <div class="col s12 m4">	
-	    <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Hire Me!</a>
-	  </div>	
-	  <div class="col s12 m4">
-	    <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Discover MPRINTS</a>
-	  </div>	
-	  <div class="col s12 m4">
-	    <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>View CV</a>
-	  </div>	
-	</div>
-	</div>	
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">“Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.”
- ~ Alan Kay.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/blue-lighten.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row" id="contact-section">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 class="blue-grey-text">You can reach out to me!</h4>
-	 <div class="row">
-        <div class="col s12 m4">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title"><h5>Personal Addresses</h5></span>
-		<div class="row">
-		<p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">mail</i>petramomanyi@gmail.com</p>
-		</div>
-		<div class="row">
-		<p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">phone</i>+254700777822</p>
-		</div>		
-		<div class="row">
-		<p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">add</i>linkedin.com/in/petermomanyi</p>
-		</div>		
-		<div class="row">
-		<p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">add</i>twitter.com/petramomanyi</p>
-		</div>		
-		<div class="row">
-		<p class="light left-align"><i class="material-icons teal-text  text-lighten-3 pad-me">room</i>Magadi Road, Nairobi.</p>
-		</div>
-            </div>
-        </div>
-      </div> 
-        <div class="col s12 m8">
-          <div class="card blue-grey lighten-5">
-            <div class="card-content black-text">
-              <span class="card-title"><h5 class="blue-grey-text">Let's talk.</h5></span>
-	      <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Your Name(s)</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Mobile Number</label>
-        </div>
-      </div>
-	<div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">mail</i>
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="This is is not a valid email address." data-success="I hope your email works!">Your email Adrress</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-          <label for="icon_prefix2">Your message</label>
-        </div>
-    </form>
-  </div>
-            </div>
-            <div class="card-action">
-	    <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Talk to me!</a>
-            </div>
-          </div>
-          </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="page-footer blue-grey darken-3">
     <div class="container">
-      <div class="row">
-        <div class="col l8 m4 s12">
-          <h5 class="white-text">Personal Statement</h5>
-          <p class="grey-text text-lighten-4 justify">This is Peter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere, justo vitae elementum imperdiet, velit risus aliquet nunc, in vehicula velit leo et lectus. Donec pretium elementum eros id laoreet. Proin facilisis, massa a egestas rutrum, tellus erat venenatis elit, in varius sem ipsum in elit. Pellentesque at est a leo accumsan vulputate non sed nibh. Sed ultricies porttitor tincidunt. Donec non dolor in nisl dictum placerat. In maximus luctus nulla, a ullamcorper arcu aliquet nec. Phasellus sed enim ornare, tristique leo non, accumsan tortor.</p>
-        </div>
-        <div class="col l4 m4 s12">
-	  <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="petermomanyi"><a class="LI-simple-link" href='https://ke.linkedin.com/in/jn-lemayian?trk=profile-badge'>Peter Momanyi</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center">
-     &copy; 2017 Peter Momanyi.&nbsp;|&nbsp;This website has been <a class="orange-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialized.</a>&nbsp;|&nbsp;Built to last by <a class="orange-text text-lighten-2" href="https://github.com/lemmah" target="_blank">Lemayian</a>
-      </div>
-    </div>
-  </footer>
+      <div class="section">
+
+        <div class="row" id="achievements-section">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4 class="teal-text">My Achievements.</h4>
+            <div class="row center carousel">
+              <div class="carousel-item" href="#one!">
+                <div class="card teal lighten-4">
+                  <div class="card-image waves-effect waves-block waves-light teal lighten-3">
+                    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
+                    <p class="light">I don't know why, but they call me guru.</p> 
+                    <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
+                    <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" href="#two!">
+                <div class="card teal lighten-4">
+                  <div class="card-image waves-effect waves-block waves-light teal lighten-3">
+                    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
+                    <p class="light">I don't know why, but they call me guru.</p> 
+                    <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
+                    <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" href="#five!">
+                <div class="card teal lighten-4">
+                  <div class="card-image waves-effect waves-block waves-light teal lighten-3">
+                    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
+                    <p class="light">I don't know why, but they call me guru.</p> 
+                    <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">close</i></span>
+                    <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" href="#three!">
+                <div class="card teal lighten-4">
+                  <div class="card-image waves-effect waves-block waves-light teal lighten-3">
+                    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
+                    <p class="light">I don't know why, but they call me guru.</p> 
+                    <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
+                    <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" href="#four!">
+                <div class="card teal lighten-4">
+                  <div class="card-image waves-effect waves-block waves-light teal lighten-3">
+                    <h2 class="center brown-text"><i class="material-icons">android</i></h2>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><h6 class="center">Android Developer</h6><i class="material-icons right">more_vert</i></span>
+                    <p class="light">I don't know why, but they call me guru.</p> 
+                    <p class="light"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i><i class="material-icons">star_border</i><span class="new badge" data-badge-caption="Average"></span></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><h5 class="center">Android Developer</h5><i class="material-icons right">close</i></span>
+                    <p class="light">I make apps that empower the future. Simple and straight to the point apps that will empower your startup into the future.</p>
+                  </div>
+                </div>
+              </div>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-  </body>
-</html>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="row center">
+          <div class="col s12 m4">	
+            <a class="waves-effect waves-light btn"><i class="material-icons left">move_to_inbox</i>Hire Me!</a>
+          </div>	
+          <div class="col s12 m4">
+            <a class="waves-effect waves-light btn"><i class="material-icons left">assistant</i>Discover MPRINTS</a>
+          </div>	
+          <div class="col s12 m4">
+            <a class="waves-effect waves-light btn"><i class="material-icons left">import_contacts</i>View CV</a>
+          </div>	
+        </div>
+      </div>	
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">“Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.”
+              ~ Alan Kay.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="img/blue-lighten.jpg" alt="Unsplashed background img 3"></div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+
+          <div class="row" id="contact-section">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4 class="blue-grey-text">You can reach out to me!</h4>
+              <div class="row">
+                <div class="col s12 m8">
+                  <div class="card blue-grey lighten-5">
+                    <div class="card-content black-text">
+                      <span class="card-title"><h5 class="blue-grey-text">Let's talk.</h5></span>
+                      <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12 m6">
+                              <i class="material-icons prefix">account_circle</i>
+                              <input id="icon_prefix" type="text" class="validate">
+                              <label for="icon_prefix">Your Name(s)</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                              <i class="material-icons prefix">phone</i>
+                              <input id="icon_telephone" type="tel" class="validate">
+                              <label for="icon_telephone">Mobile Number</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">mail</i>
+                              <input id="email" type="email" class="validate">
+                              <label for="email" data-error="This is is not a valid email address." data-success="I hope your email works!">Your email Adrress</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">mode_edit</i>
+                              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                              <label for="icon_prefix2">Your message</label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card-action">
+                        <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Talk to me!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m4">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title"><h5>Personal Addresses</h5></span>
+                      <div class="row">
+                        <p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">mail</i>petramomanyi@gmail.com</p>
+                      </div>
+                      <div class="row">
+                        <p class="light left-align"><i class="material-icons teal-text text-lighten-3 pad-me">phone</i>+254700777822</p>
+                      </div>    
+                      <div class="row">
+                        <p class="light left-align"><i class="fa fa-linkedin-square small teal-text text-lighten-3 pad-me"></i>linkedin.com/in/petermomanyi</p>
+                      </div>    
+                      <div class="row">
+                        <p class="light left-align"><i class="fa fa-twitter-square small teal-text text-lighten-3 pad-me"></i>twitter.com/petramomanyi</p>
+                      </div>    
+                      <div class="row">
+                        <p class="light left-align"><i class="material-icons teal-text  text-lighten-3 pad-me">room</i>Magadi Road, Nairobi.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l8 m4 s12">
+              <h5 class="white-text">Personal Statement</h5>
+              <p class="grey-text text-lighten-4 justify">This is Peter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere, justo vitae elementum imperdiet, velit risus aliquet nunc, in vehicula velit leo et lectus. Donec pretium elementum eros id laoreet. Proin facilisis, massa a egestas rutrum, tellus erat venenatis elit, in varius sem ipsum in elit. Pellentesque at est a leo accumsan vulputate non sed nibh. Sed ultricies porttitor tincidunt. Donec non dolor in nisl dictum placerat. In maximus luctus nulla, a ullamcorper arcu aliquet nec. Phasellus sed enim ornare, tristique leo non, accumsan tortor.</p>
+            </div>
+            <div class="col l4 m4 s12">
+              <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="petermomanyi"><a class="LI-simple-link" href='https://ke.linkedin.com/in/jn-lemayian?trk=profile-badge'>Peter Momanyi</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container center">
+            &copy; 2017 Peter Momanyi.&nbsp;|&nbsp;This website has been <a class="orange-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialized.</a>&nbsp;|&nbsp;Built to last by <a class="orange-text text-lighten-2" href="https://github.com/lemmah" target="_blank">Lemayian</a>
+          </div>
+        </div>
+      </footer>
+
+
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+      <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+      <!-- Font Awesome Icons -->
+     <script async src="https://use.fontawesome.com/a6803cef02.js"></script> 
+    </body>
+    </html>
