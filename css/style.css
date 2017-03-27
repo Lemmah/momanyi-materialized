@@ -78,3 +78,7 @@ font-family: 'Condiment', cursive;
 padding: 10px 20px 10px 20px;
 text-align: left;
 }
+
+.preloader-wrapper {
+margin-left: 44%;
+}

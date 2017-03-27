@@ -32,5 +32,13 @@
     ];
     Materialize.scrollFire(options);
   });
+  //  This is to reveal the main body after complete loading.
+  function revealMainBody(){
+  var loaderSection = document.getElementById("loader-section");
+  var hide = document.createAttribute("hidden");
+  loaderSection.setAttributeNode(hide);
+  document.getElementById("main-section").removeAttribute("hidden");      
+  }
+  revealMainBody();
   }); // end of document ready
 })(jQuery); // end of jQuery name space
