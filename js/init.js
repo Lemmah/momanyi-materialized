@@ -38,7 +38,14 @@
   var hide = document.createAttribute("hidden");
   loaderSection.setAttributeNode(hide);
   document.getElementById("main-section").removeAttribute("hidden");      
+  document.querySelector('#images_display').click();
+  document.querySelector('#achievements_display').click();
   }
-  revealMainBody();
+  var interval = setInterval(function() {
+    if(document.readyState === 'complete') {
+        clearInterval(interval);
+        revealMainBody();
+    }    
+  }, 100);
   }); // end of document ready
 })(jQuery); // end of jQuery name space
