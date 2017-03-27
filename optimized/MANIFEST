@@ -1,0 +1,20 @@
+This zip file contains optimized resources for http://lemmah.github.io/momanyi-materialized. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+css/materialize.css: https://lemmah.github.io/momanyi-materialized/css/materialize.css
+css/style.css: https://lemmah.github.io/momanyi-materialized/css/style.css
+css/a6803cef02.css: https://use.fontawesome.com/a6803cef02.css
+js/materialize.js: https://lemmah.github.io/momanyi-materialized/js/materialize.js
+js/init.js: https://lemmah.github.io/momanyi-materialized/js/init.js
+image/blue-darken.jpg: https://lemmah.github.io/momanyi-materialized/img/blue-darken.jpg
+image/resized.png: https://lemmah.github.io/momanyi-materialized/img/resized.png
+image/golden-lighten.jpg: https://lemmah.github.io/momanyi-materialized/img/golden-lighten.jpg
+image/themprints.jpg: https://lemmah.github.io/momanyi-materialized/img/themprints.jpg
+image/digitaltraining5.jpg: https://lemmah.github.io/momanyi-materialized/img/digitaltraining5.jpg
+image/digitaltraining10.jpg: https://lemmah.github.io/momanyi-materialized/img/digitaltraining10.jpg
+image/blue-lighten.jpg: https://lemmah.github.io/momanyi-materialized/img/blue-lighten.jpg
