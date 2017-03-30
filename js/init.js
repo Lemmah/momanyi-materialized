@@ -2,7 +2,7 @@
   $(function(){
     $('.button-collapse').sideNav();
     $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300
+      menuWidth: 275, // Default is 300
       edge: 'left', // Choose the horizontal origin
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
@@ -37,7 +37,7 @@
   var loaderSection = document.getElementById("loader-section");
   var hide = document.createAttribute("hidden");
   loaderSection.setAttributeNode(hide);
-  document.getElementById("main-section").removeAttribute("hidden");      
+  document.getElementById("main-section").removeAttribute("hidden");
   document.querySelector('#images_display').click();
   document.querySelector('#achievements_display').click();
   }
@@ -45,7 +45,7 @@
     if(document.readyState === 'complete') {
         clearInterval(interval);
         revealMainBody();
-    }    
+    }
   }, 100);
   }); // end of document ready
 })(jQuery); // end of jQuery name space
