@@ -19,7 +19,7 @@
       bottom: 1000,
       offset: 0
     });
-    var options = [
+   /* var options = [
       {selector: '#icon-section', offset: 600, callback: function(el) {
         Materialize.toast("Thanks for viewing my viewing my skills.", 1500 );
       } },
@@ -32,6 +32,7 @@
     ];
     Materialize.scrollFire(options);
   });
+  */
   //  This is to reveal the main body after complete loading.
   function revealMainBody(){
   var loaderSection = document.getElementById("loader-section");
