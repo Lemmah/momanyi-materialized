@@ -19,20 +19,16 @@
       bottom: 1000,
       offset: 0
     });
-   /* var options = [
+    var options = [
       {selector: '#icon-section', offset: 600, callback: function(el) {
-        Materialize.toast("Thanks for viewing my viewing my skills.", 1500 );
       } },
       {selector: '#achievements-section', offset: 600, callback: function(el) {
-        Materialize.toast("Hope you liked my achievements, can't wait to hear from you.", 1500 );
       } },
       {selector: '#contact-section', offset: 300, callback: function(el) {
-        Materialize.toast("Hope we'll soon get connected.", 1500 );
       } }
     ];
     Materialize.scrollFire(options);
   });
-  */
   //  This is to reveal the main body after complete loading.
   function revealMainBody(){
   var loaderSection = document.getElementById("loader-section");
